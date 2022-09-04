@@ -1,0 +1,63 @@
+1. What is AWS IAM?
+    --> The Amazon Web Services Identity and Access Management service is like a security guard at the door to Amazon Web Services. This is where Azure Services and its environment are authenticated and authorized. 
+    The basic building blocks of AWS IAM are IAM roles, IAM users, groups and policies.
+
+2. What is an Identity? 
+  -->An Identity is something that can be authenticated.
+
+3. Define AWS users and groups. 
+
+    -->IAM users can be people or applications that interact with the AWS environment services and its resources.
+    -->IAM groups are collections of IAM users.
+
+4. What are the best practices you will follow while creating IAM users?
+
+    -->To increases the security posture by providing every user of IAM a unique set of credentials
+
+5. Types of AWS Policies
+  -->Identity-based policies
+  -->Resource-based policies
+
+6. explain the IAM Policy Structure
+
+     -->*Effect — Decides whether the resource is allowed or denied (Allow/Deny)  
+	*Action — A set of service-specific parameters  
+	*Resource — Resource names  
+	*Condition (Optional)
+
+9. Define AWS IAM roles
+
+   -->An IAM role is a temporary way to access permissions through your identity.
+
+10. What is a Root user? 
+
+   -->The Root User is the Owner Account (administrator) that is created when the AWS Account is created.
+
+11. How do you revoke access rights? 
+
+   -->Simply click on Manage Permissions on his or her profile page and select Revoke Access.
+      You’ll be presented with a list of all services to which they are granted access;
+      check each service that is correct and then click Revoke Access in the bottom right corner.
+
+12. What is MFA in AWS IAM? 
+
+   -->MFA adds an extra layer of security for users accessing AWS resources.
+
+13. Is it possible to monitor the activity of IAM users?
+    
+    -->Yes, IAM users’ activities can be monitored. In case of a violation, you can remove the IAM user’s access. 
+
+14. What are IAM users’ access keys? 
+
+    -->Each IAM user receives an access key along with a secret key. 
+       Users can use their access keys to authenticate themselves to Amazon Web Services when they launch an instance, run a command, or call an API.
+
+15. What is Access control to AWS resources?
+    
+    -->(ACLs) to allow or deny access
+
+16. Which are the key features of AWS IAM? 
+	-->Access control to AWS resources 
+	   Multi-factor authentication (MFA) 
+ 	   Federated access 
+	   Analytics 
