@@ -1,0 +1,124 @@
+1. What is Git?
+
+   -->Git is a version control system for tracking changes in computer files and is used to help coordinate work among several people on a project while tracking progress over time. 
+      In other words, it’s a tool that facilitates source code management in software development.
+        Git favors both programmers and non-technical users by keeping track of their project files. It enables multiple users to work together and handles large projects efficiently
+
+2. What do you understand by the term ‘Version Control System’?
+
+    -->A version control system (VCS) records all the changes made to a file or set of data, so a specific version may be called later if needed.
+
+3. What’s the difference between Git and GitHub?
+
+    -->Git is a software
+
+       GitHub is a service
+
+        Git can be installed locally on the system
+
+        GitHub is hosted on the web
+
+         >Git - Provides a desktop interface called git GUI
+
+        GitHub   - Provides a desktop interface called GitHub Desktop.
+
+           >Git   It does not support user management features
+
+           GitHub    Provides built-in user management.
+
+4. What is a Git repository?
+Git repository refers to a place where all the Git files are stored. These files can either be stored on the local repository or on the remote repository.
+
+git-repo
+
+5. How can you initialize a repository in Git?
+If you want to initialize an empty repository to a directory in Git, you need to enter the git init command. After this command, a hidden .git folder will appear.
+
+taha-git
+
+6. How is Git different from Subversion (SVN)?
+GIT
+
+SVN
+
+Git is a distributed decentralized version control system
+
+SVN is a centralized version control system.
+
+Git stores content in the form of metadata.
+
+SVN stored data in the form of files.
+
+The master contains the latest stable release.
+
+In SVN, the trunk directory has the latest stable release 
+
+The contents of Git are hashed using the SHA-1 hash algorithm.
+
+SVN doesn’t support hashed contents. 
+
+7. Name a few Git commands with their function.
+Git config - Configure the username and email address
+Git add - Add one or more files to the staging area
+Git diff - View the changes made to the file
+Git init - Initialize an empty Git repository
+Git commit - Commit changes to head but not to the remote repository
+
+8. What are the advantages of using Git?
+Faster release cycles
+Easy team collaboration
+Widespread acceptance 
+Maintains the integrity of source code
+Pull requests
+git-7.
+
+9. What language is used in Git?
+Git is a fast and reliable version control system, and the language that makes this possible is ‘C.’ 
+
+
+10. What is the correct syntax to add a message to a commit?
+ git commit -m "x files created"
+
+11. Which command is used to create an empty Git repository?
+git init - This command helps to create an empty repository while working on a project. 
+
+12. What does git pull origin master do?
+The git pull origin master fetches all the changes from the master branch onto the origin and integrates them into the local branch.
+
+git pull = git fetch + git merge origin/ master
+
+
+13.  What does the git push command do?
+The Git push command is used to push the content in a local repository to a remote repository. After a local repository has been modified, a push is executed to share the modifications with remote team members.
+
+Git-push-command
+
+14. Difference between git fetch and git pull.
+
+
+Git Fetch
+
+Git Pull
+
+The Git fetch command only downloads new data from a remote repository.
+
+Git pull updates the current HEAD branch with the latest changes from the remote server.
+
+It does not integrate any of these new data into your working files.
+
+Downloads new data and integrate it with the current working files.
+
+Command - git fetch origin
+
+git fetch --all
+
+Tries to merge remote changes with your local ones.
+
+Command - git pull origin master
+
+15. GitHub, GitLab and Bitbucket are examples of git repository _______ function?
+hosting. All the three are services for hosting Git repositories
+
+16. What do you understand about the Git merge conflict?
+A Git merge conflict is an event that occurs when Git is unable to resolve the differences in code between the two commits automatically. 
+
