@@ -1,0 +1,73 @@
+1.What is EC2?
+
+--->Amazon EC2 (Elastic Compute Cloud) is a web service interface that provides resizable compute capacity in the AWS cloud. It is designed for developers to have complete control over web-scaling and computing resources.
+EC2 instances can be resized and the number of instances scaled up or down as per our requirement. These instances can be launched in one or more geographical locations or regions, and Availability Zones (AZs). Each region comprises of several AZs at distinct locations, connected by low latency networks in the same region.
+
+
+2.What are the features of Amazon EC2?
+
+    Bare Metal instances- Amazon EC2 bare metal instances provide your applications with direct access to the processor and memory of the underlying server.Bare metal instances are built on the Nitro system, a collection of AWS-built hardware offload and hardware protection components that come together to securely provide high performance networking and storage resources to EC2 instances.
+     Pause and Resume Your Instances- You will not be charged for instance usage while your instance is hibernated. Storage is charged at standard EBS rates. For more information about hibernation, and supported instance types and operating systems.
+     High I/O Instances- High I/O I3 and I3en instances are backed by Non-Volatile Memory Express (NVMe) based SSDs, and are ideally suited for customers running very high performance NoSQL databases, transactional systems, and Elastic Search workloads. High I/O instances also offer sequential disk throughput up to 16 GB/s, which is ideal for analytics workloads.
+	Flexible Storage Options- Amazon EBS provides persistent, highly available, consistent, low-latency block storage volumes for use with Amazon EC2 instances. Each Amazon EBS volume is automatically replicated within its Availability Zone to protect you from component failure, offering high availability and durability. It is designed for application managers who need to tune workloads for capacity, performance and cost.
+	Elastic IP Addresses- Elastic IP addresses are static IP addresses designed for dynamic cloud computing. An Elastic IP address is associated with your account not a particular instance, and you control that address until you choose to explicitly release it.
+	Enhanced Networking- This feature uses a new network virtualization stack that provides higher I/O performance and lower CPU utilization compared to traditional implementations. In order to take advantage of Enhanced Networking, you should launch an HVM AMI in VPC, and install the appropriate driver.
+
+
+
+3.Explain Elastic Block Storage?
+      Amazon Elastic Block Store (EBS) is an easy to use, high-performance, block-storage service designed for use with Amazon Elastic Compute Cloud (EC2) for both throughput and transaction intensive workloads at any scale. A broad range of workloads, such as relational and non-relational databases, enterprise applications, containerized applications, big data analytics engines, file systems, and media workflows are widely deployed on Amazon EBS.
+
+
+
+
+4.How does Elastic Load Balancer work?
+	A load balancer accepts incoming traffic from clients and routes requests to its registered targets (such as EC2 instances) in one or more Availability Zones. It then resumes routing traffic to that target when it detects that the target is healthy again.
+	caching
+
+
+6.What is S3?What is it used for?
+	Amazon Simple Storage Service is storage for the Internet. It is designed to make web-scale computing easier for developers. Amazon S3 has a simple web services interface that you can use to store and retrieve any amount of data, at any time, from anywhere on the web.
+	It is used for:
+	industry-leading scalability, data availability, security, and performance.
+
+
+7.What is Lambda in Amazon EC2?
+	AWS Lambda is a responsive cloud service that inspects actions within the application and responds by deploying the user-defined codes, known as functions. It automatically manages the compute resources across multiple availability zones and scales them when new actions are triggered.It supports the code written in Java, Python and Node.js, and the service can launch processes in languages supported by Amazon Linux
+
+8.What is the difference between terminating and stopping an EC2 instance?
+	Terminate Instance- When you terminate an EC2 instance, the instance will be shutdown and the virtual machine that was provisioned for you will be permanently taken away and you will no longer be charged for instance usage. Any data that was stored locally on the instance will be lost. Any attached EBS volumes will be detached and deleted. However, if you attach an EBS Snapshot to an instance at boot time, the default option in the Dashboard is to delete the attached EBS volume upon termination.
+	Stop Instance- When you stop an EC2 instance, the instance will be shutdown and the virtual machine that was provisioned for you will be permanently taken away and you will no longer be charged for instance usage. The key difference between stopping and terminating an instance is that the attached bootable EBS volume will not be deleted. The data on your EBS volume will remain after stopping while all information on the local (ephemeral) hard drive will be lost as usual. The volume will continue to persist in its availability zone. Standard charges for EBS volumes will apply.
+
+9.What is auto-scaling?
+	Amazon EC2 Auto Scaling helps you maintain application availability and allows you to automatically add or remove EC2 instances according to conditions you define. Dynamic scaling responds to changing demand and predictive scaling automatically schedules the right number of EC2 instances based on predicted demand.
+
+10.Describe Storage For Amazon Ec2 Occurrence ?
+	Amazon EC2 provides you with flexible, cost effective, and easy-to-use data storage options for your instances. Each option has a unique combination of performance and durability. These storage options can be used independently or in combination to suit your requirements.
+	These storage options include the following:
+	Amazon EBS- Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance. You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates. For example, Amazon EBS is the recommended storage option when you run a database on an instance.
+	Amazon EC2 instance store- This disk storage is referred to as instance store. Instance store provides temporary block-level storage for instances. The data on an instance store volume persists only during the life of the associated instance; if you stop, hibernate, or terminate an instance, any data on instance store volumes is lost.
+	Amazon EFS file system- Amazon EFS provides scalable file storage for use with Amazon EC2. You can create an EFS file system and configure your instances to mount the file system.
+	Amazon S3- Amazon S3 provides access to reliable and inexpensive data storage infrastructure. It is designed to make web-scale computing easier by enabling you to store and retrieve any amount of data, at any time, from within Amazon EC2 or anywhere on the web.
+	Adding storage- The root storage device contains all the information necessary to boot the instance. You can specify storage volumes in addition to the root device volume when you create an AMI or launch an instance using block device mapping.
+
+11.What is WorkSpaces in AWS EC2?
+	Amazon WorkSpaces is a managed, secure Desktop-as-a-Service (DaaS) solution. You can use Amazon WorkSpaces to provision either Windows or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across the globe.A WorkSpace is available as a bundle of operating system, compute resources, storage space, and software applications that allow a user to perform day-to-day tasks just like using a traditional desktop.
+
+
+12.How To Connect To Your Amazon Ec2 Instance?
+	Following are the steps to connect to a Linux instance:
+	Install PuTTY on your local machine.
+	Get your instance ID.
+	Get the public DNS name of the instance.
+	Locate the private key.
+	Enable inbound SSH traffic from your IP address to your instance.
+	Converting Your Private Key Using PuTTYgen.
+	Starting a PuTTY Session.
+	Now you are connected to your EC2 instance.
+
+13.What Is Amazon Machine Image (ami) ?
+	An Amazon Machine Image (AMI) provides the information required to launch an instance. You must specify an AMI when you launch an instance. You can launch multiple instances from a single AMI when you need multiple instances with the same configuration. You can use different AMIs to launch instances when you need instances with different configurations.
+
+	What Is Public Key Credentials?
+	A public key credential is created and stored by an authenticator at the behest of a WebAuthn Relying Party, subject to user consent. Subsequently, the public key credential can only be accessed by origins belonging to that Relying Party.
