@@ -1,0 +1,94 @@
+Explain the S3 bucket
+Define all types of Storage Classes in AWS S3?
+What Is AWS S3 Replication?
+What is Snow Ball?
+What are the Storage Classes available in Amazon S3?
+Describe what's T2 times?
+Why does Route 53 provide high availability and low latency?
+What do you already know approximately AWS Lambda?
+Why do we need to use a Web Application Firewall?
+Can you ping the router or default gateway that connects your subnets?
+
+1. Can You Host A Website In AWS S3?
+Yes, we can host a website in the AWS S3 bucket.
+
+2. Does AWS S3 Support Versioning?
+Yes, AWS S3 helps versioning simplest if enabled; it's now no longer a default option. By allowing versioning, you can store unique variations of a similar document in an equal bucket.
+
+3. What kind of data can I store in AWS S3?
+You can store virtually any kind of data in any format.
+
+4. How Is The Pricing Policy Determined For AWS S3?
+The pricing coverage is decided primarily based totally on the subsequent factors:
+
+Utilization of garage
+Storage management
+Transfer of information
+Transfer acceleration
+Number of requests
+5. How Would You Delete An AWS S3 Bucket?
+We can comply with those steps to delete an AWS S3 bucket:
+
+Step 1: Log in to the AWS Management Console and pick S3
+
+Step 2: Select the bucket that desires to be removed
+
+Step 3: Press the 'Delete' button
+
+Step 4: When it activates you to categorize the bucket call for deletion, write the call
+
+Step 5: Click the 'Confirmation' button
+
+6. What Is An Object Lock Feature In AWS S3?
+These features will lock the object. Nobody can delete, overwrite, or modify the same object. This can be useful if you need to ensure that specific files are not changed or deleted. You can enable object locks on individual files or folders, or on an entire bucket. When an object lock is in place, the owner of the lock will be notified if any attempt is made to change the locked object.
+
+7. Is there a way to add a document of more than a hundred Megabytes in Amazon S3?
+Yes, there are ways to add a document of more than a hundred Megabytes in Amazon S3. The first way is to use the multipart upload API. This API splits your file into parts and uploads them in parallel. The total size of the parts cannot exceed 100 Megabytes.
+
+8. How lots of data can I save in Amazon S3?
+You can store an unlimited volume of data and objects in Amazon S3. Individually Amazon S3 can store objects ranging from 0 bytes to 5 TB in size. In fact, the largest object or file that can be uploaded on Amazon S3 at a single PUT is 5 GB. For objects larger than 100 MB, clients must not forget the use of the Multipart Upload capability.
+
+9. Does Amazon save its very own data in Amazon S3?
+Yes. Developers inside Amazon use Amazon S3 for an extensive form of initiatives. Many of those initiatives use Amazon S3 as their authoritative data save and depend upon it for business-vital operations.1. Can You Host A Website In AWS S3?
+Yes, we can host a website in the AWS S3 bucket.
+
+2. Does AWS S3 Support Versioning?
+Yes, AWS S3 helps versioning simplest if enabled; it's now no longer a default option. By allowing versioning, you can store unique variations of a similar document in an equal bucket.
+
+3. What kind of data can I store in AWS S3?
+You can store virtually any kind of data in any format.
+
+4. How Is The Pricing Policy Determined For AWS S3?
+The pricing coverage is decided primarily based totally on the subsequent factors:
+
+*Utilization of garage
+*Storage management
+*Transfer of information
+*Transfer acceleration
+*Number of requests
+
+
+5. How Would You Delete An AWS S3 Bucket?
+We can comply with those steps to delete an AWS S3 bucket:
+
+Step 1: Log in to the AWS Management Console and pick S3
+
+Step 2: Select the bucket that desires to be removed
+
+Step 3: Press the 'Delete' button
+
+Step 4: When it activates you to categorize the bucket call for deletion, write the call
+
+Step 5: Click the 'Confirmation' button
+
+6. What Is An Object Lock Feature In AWS S3?
+These features will lock the object. Nobody can delete, overwrite, or modify the same object. This can be useful if you need to ensure that specific files are not changed or deleted. You can enable object locks on individual files or folders, or on an entire bucket. When an object lock is in place, the owner of the lock will be notified if any attempt is made to change the locked object.
+
+7. Is there a way to add a document of more than a hundred Megabytes in Amazon S3?
+Yes, there are ways to add a document of more than a hundred Megabytes in Amazon S3. The first way is to use the multipart upload API. This API splits your file into parts and uploads them in parallel. The total size of the parts cannot exceed 100 Megabytes.
+
+8. How lots of data can I save in Amazon S3?
+You can store an unlimited volume of data and objects in Amazon S3. Individually Amazon S3 can store objects ranging from 0 bytes to 5 TB in size. In fact, the largest object or file that can be uploaded on Amazon S3 at a single PUT is 5 GB. For objects larger than 100 MB, clients must not forget the use of the Multipart Upload capability.
+
+9. Does Amazon save its very own data in Amazon S3?
+Yes. Developers inside Amazon use Amazon S3 for an extensive form of initiatives. Many of those initiatives use Amazon S3 as their authoritative data save and depend upon it for business-vital operations.

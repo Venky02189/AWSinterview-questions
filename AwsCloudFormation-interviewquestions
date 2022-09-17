@@ -1,0 +1,152 @@
+What is AWS CloudFormation?
+•	AWS CloudFormation is a service that helps you model and set up your Amazon Web Services resources so that you spend less time managing your resources and more time focusing on your applications that run in AWS.
+•	It is useful if you have to launch the same type of infrastructure multiple times and simplifies provisioning and management on AWS.
+•	AWS CloudFormation is a configuration orchestration tool that allows you to modify your infrastructure to automate your deployments.
+•	AWS CloudFormation gives developers and systems administrators an easy way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.
+
+
+
+Explain CloudFormation's working model?
+•	Firstly we have to code our infrastructure in a YAML or JSON text-based file which is called a template.
+•	Then locally we write our code in the AWS CloudFormation tool. Otherwise we can upload a YAML or JSON file into the S3 bucket.
+•	Next use the GUI of AWS CF or the Command Line Interface to create a stack based on our template code.
+•	At last, CloudFormation will deploy resources, provision it and configures the template which we specified.
+
+What are benefits of AWS CloudFormation?
+•	All code: Treat your infrastructure as a code which simplifies and makes it easy to modify and do changes accordingly.
+•	Automation of Infrastructure: We do not have to work on provisioning resources, we only need to make his application better. All the provisioning and managing of resources will be taken care of by CloudFormation
+•	Safety controls: The controls are automated to reduce effort and increase quality and performance.
+•	Extensibility: CloudFormation stack provides an extensible mechanism to make our own extensions and add it to the CloudFormation template. Custom provisioning of extensions can be developed for a third party resource.
+•	Customization through parameters.
+
+
+
+What is a circular dependency in AWS CloudFormation?
+There is interleaved dependency between two resources.
+•	Resource X is dependent on Resource Y, and Resource Y is dependent on Resource X.
+•	When this type of situation occurs, you will get a circular dependency error because AWS CloudFormation is unable to clearly determine which resource should be created first.
+•	The AWS CloudFormation circular dependency can be caused by interactions between services that cause them to be mutually dependent.
+
+
+
+How to solve circular dependency error in AWS CloudFormation?
+•	When two are dependent on one another we will get a circular dependency error because AWS CloudFormation is unable to clearly determine which resource should be created first
+•	The first step is to examine the resources that are outlined and make sure that AWS CloudFormation can determine what resource order it should take.
+•	To resolve a dependency error, add a DependsOn attribute to resources that depend on other resources in your template.
+•	Using DependsOn, we can specify that a particular resource needs to be created before the other resource.
+
+
+
+How can you create and delete stacks of AWS?
+•	In AWS CloudFormation related resources are managed as a single unit called a stack.
+•	It is possible to create, update, and delete a collection of resources by creating, updating, and deleting stacks.
+•	All the resources in a stack are defined by the stack's AWS CloudFormation template.
+
+
+What does AWS Serverless Application Model add on top of CloudFormation?
+•	AWS Serverless Application Model is an open-source framework you can use to build serverless applications on AWS.
+•	AWS SAM has a template which is used to define serverless application
+•	AWS CloudFormation enables you to create a template that defines your application's resources and lets you manage the application as a stack.
+•	You create a template that describes all the AWS resources that you want and AWS CloudFormation takes care of further provisioning and configuring those resources for you.
+•	AWS SAM is basically an extension for the AWS CloudFormation template language that lets you define serverless AWS Lambda applications at a higher level.
+•	It helps CloudFormation to setup things for serverless applications and their deployment.
+•	It automates common tasks such as function role creation, and makes it easier to write CloudFormation templates for your serverless applications.
+
+
+
+How does AWS Cloud Pipeline interact with CloudFormation?
+•	You can use AWS CodePipeline to trigger a Cloud Formation template to run in the deployment phase.
+The pipeline has following stages:
+•	Source phase: Fetch the latest commit.
+•	Build phase: Build the code into a docker image and push it to ECR.
+•	Deploy phase: Take the latest docker image from ECR, deploy it to ECS
+
+
+
+How are shell scripts used with AWS CloudFormation templates?
+EC2 instances can run shell scripts when they are launched using CloudFormation.
+•	Provide commands in user data section while launching an instance
+•	If instance is a part of auto scaling group,user data can also be provided using launch configuration
+•	We can use CodeDeploy for deploying apps on EC2 instances and it requires shell scripts to follow intended actions.
+
+
+How does AWS CloudFormation work?
+AWS CloudFormation makes underlying service calls to AWS to provision and configure your resources. CloudFormation can only perform actions that you have permission to do.
+When creating a stack, AWS CloudFormation makes underlying service calls to AWS to provision and configure your resources. CloudFormation can only perform actions that you have permission to do. For example, to create EC2 instances by using CloudFormation, you need permissions to create instances.
+
+
+
+Explain AWS CloudFormation Features?
+AWS CloudFormation gives you an easy way to model a collection of related AWS and third-party resources, provision them quickly and consistently, and manage them throughout their lifecycles, by treating infrastructure as code.
+•	Extensibility - You can build your own resource providers using the AWS CloudFormation CLI, an open-source tool that streamlines the development process, including local testing and code generation capabilities.
+•	Cross account & cross-region management - CloudFormation StackSets let you provision a common set of AWS resources across multiple accounts and regions, with a single CloudFormation template. StackSets takes care of automatically and safely provisioning, updating, or deleting stacks, no matter where they are.
+•	Authoring with JSON/YAML - CloudFormation allows you to model your entire cloud environment in text files. You can use open-source declarative languages, such as JSON or YAML, to describe what AWS resources you want to create and configure.
+•	Safety controls - CloudFormation automates provisioning and updating your infrastructure in a safe and controlled manner. There are no manual steps or controls that can lead to errors.
+•	Dependency management - AWS CloudFormation automatically manages dependencies between your resources during stack management actions.
+
+
+Explain the three basic types of cloud services.
+The three basic types of cloud services are:
+•	Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
+•	Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
+•	Networking - These include VPC, Amazon CloudFront, Route53
+
+Difference between SAM template and Cloudformation template?
+SAM templates are an extension of AWS CloudFormation templates, with some additional components that make them easier to work with. For the full reference for AWS CloudFormation templates, see AWS CloudFormation Template Reference in the AWS CloudFormation User Guide.
+Cloudformation template is a declaration of the AWS resources that make up a stack. The template is stored as a text file whose format complies with the JavaScript Object Notation (JSON) or YAML standard.In the template, you declare the AWS resources you want to create and configure.
+
+
+
+What happens when one of the resources in a stack cannot be created successfully?
+By default, the automatic rollback on error feature is enabled. This will direct CloudFormation to only create or update all resources in your stack if all individual operations succeed. If they do not, CloudFormation reverts the stack to the last known stable configuration.
+For example,if you accidentally exceed your default limit of Elastic IP addresses, or you don not have access to an EC2 AMI that you are trying to run. This feature enables you to rely on the fact that stacks are created either fully or not at all, which simplifies system administration and layered solutions built on top of CloudFormation.
+
+
+
+What can developers do with AWS CloudFormation?
+AWS CloudFormation is a service that gives developers and businesses a possible way to create a collection of related AWS and third-party resources, and provision and manage them in an orderly and predictable fashion.
+Developers can deploy and update compute, database, and many other resources in a simple, declarative style that abstracts away the complexity of specific resource APIs. AWS CloudFormation is designed to allow resource lifecycles to be managed repeatably, predictable, and safely, while allowing for automatic rollbacks, automated state management, and management of resources across accounts and regions.
+
+
+
+What are the steps involved in a CloudFormation Solution?
+Here are the steps involved in a CloudFormation solution:
+•	Create or use an existing CloudFormation template using JSON or YAML format.
+•	Save the code in an S3 bucket, which serves as a repository for the code.
+•	Use AWS CloudFormation to call the bucket and create a stack on your template.
+•	CloudFormation reads the file and understands the services that are called the relationship between the services, and provisions the services one after the other
+
+
+What are the elements of an AWS CloudFormation template?
+Template parameters are used to customize aspects of your template at run time, when the stack is built. For example, the Amazon RDS database size, Amazon EC2 instance types, database and web server port numbers can be passed to AWS CloudFormation when a stack is created. Each parameter can have a default value and description, and may be marked as "NoEcho" to hide the actual value you enter on the screen and in the AWS CloudFormation event logs. When you create an AWS CloudFormation stack, the AWS Management Console will automatically synthesize and present a pop-up dialog form for you to edit parameter values.
+•	An optional list of template parameters (input values supplied at stack creation time)
+•	An optional list of output values (e.g., the complete URL to a web application)
+•	An optional list of data tables used to look up static configuration values (e.g., AMI names)
+•	The list of AWS resources and their configuration values
+•	A template file format version number
+
+
+What is the AWS CloudFormation Registry?
+The CloudFormation registry lists the extensions, both private and public (AWS), that are available for use in your CloudFormation account. An extension is an artifact, registered in the CloudFormation Registry, which augments the functionality of CloudFormation in a native manner.
+Third-party resource types must be registered before they can be used to provision resources with AWS CloudFormation templates. Please see Using the AWS CloudFormation registry in our in the documentation for details.
+
+
+How is AWS CloudFormation different from AWS Elastic Beanstalk?
+AWS CloudFormation helps you provision and describe all of the infrastructure resources that are present in your cloud environment. On the other hand, AWS Elastic Beanstalk provides an environment that makes it easy to deploy and run applications in the cloud.
+AWS CloudFormation supports the infrastructure needs of various types of applications, like legacy applications and existing enterprise applications. On the other hand, AWS Elastic Beanstalk is combined with the developer tools to help you manage the lifecycle of your applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

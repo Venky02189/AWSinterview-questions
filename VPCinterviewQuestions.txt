@@ -1,0 +1,70 @@
+1. What is the actual definition of the term “VPC”?
+2. What are the components of Amazon VPC?
+          --->>Virtual Private Cloud 
+               Subnet
+               Internet Gateway
+  	           NAT Gateway
+               Hardware VPN Connection
+               Virtual Private Gateway
+               Peering Connection
+               VPC Endpoint    
+               
+               3. What are Internet Gateways in VPC?     
+Answer: An Internet Gateway is highly available, horizontally scaled VPC component. Gateways establish coherent connections between your Amazon VPC network and the internet. There can be only one gateway associated with each VPC. These are the VPC components that provide NAT (Network Address Translation) for instances which have already assigned public IP addresses. In the case of internet routable traffic, such a gateway provides a target in your VPC route tables.
+
+4. What is a NAT Device?
+Answer: A NAT device in your VPC will enable instances in the private subnet to trigger outbound IPv4 traffic to other AWS services/internet while hindering inbound traffic initiated on the internet. Here when traffic goes out to the internet, IP address gets replaced by NAT device’s address and when the response comes back to the instances, the device translates the address of instances back to the private IP addresses. AWS has two types of NAT devices – NAT instance and NAT gateway. Linux AMIs are configured to run as NAT instances. NAT does not support IPv6 as well.
+
+5. What is a subnet in VPC?
+Answer: According to AWS documentation, subnets are nothing but a range of IP addresses in your VPC. It is possible to launch the resources of AWS into your desired subnet. For resources that need internet access, you can use a public subnet. Whereas for resources that don’t need the internet, a private subnet is sufficient.
+
+6. What is the default VPC? Explain its advantages.
+Answer: The questions based on default VPC are among the top AWS VPC interview questions. It’s a logically isolated virtual network that gets created automatically in AWS cloud for an account when the user makes use of Amazon EC2 resources for the first time.
+You can alter the components of the default VPC as per your need. There are several advantages of a default VPC. Here, a user can access high-level features such as different IPs, network interfaces without creating a separate VPC or launching instances.
+
+7. What is ELB (Elastic Load Balancing) and how does it affect VPC?
+Answer: As the name implies ELB is a load balancer service for AWS deployments. A load balancer divides the amount of work a computer has to do into more computers and get it done faster. In the same way here ELB distributes incoming application traffic into multiple targets like EC2 instances.
+
+7. What are the types of load balancers?
+There are 3 types of ELBs to ensure scalability, availability, and security for ensuring your applications as fault tolerant. These are classic, network, and application load balancers. Network and application load balancers can be used in conjunction with VPC and these can route traffics to targets within VPCs.
+
+8. What do you know about VPC Peering? 
+Answer: You may be asked about the AWS VPC peering bandwidth in AWS VPC interview. It’s simply the networking connection between two VPs in the same network. It’s possible to create a VPC peering connection between your own VPs or VPC with another AWS account within the same region. It’s not needed for AWS to break the existing VPC infrastructure to enable VPC peering. There is no need of a special hardware for this purpose. It’s not creating a VPN connection or network gateway within the AWS.
+The main intention behind such a connection is to facilitate data transfer across multiple VPNs spanning different AWS accounts. This type of peering is a one-to-one relationship wherein transitive connection is not supported.  And while talking about AWS VPC peering bandwidth, there are no bandwidth limitations for peering connections as well.
+
+9. What are the differences between Private, Public & Elastic IP Addresses?
+As the name implies, private IP addresses are IP addresses that aren’t accessible over the internet. If you want to communicate between instances in the same network, private IPs are used. At an instance launching time, a private IP from subnet’s IP address range and a DNS hostname is assigned to eth0 of the instance (default network interface).
+
+10. Is there any limit to the number of VPCs, subnets, gateways, VPNs that I can create?
+Answer: Yes, there is definitely a limit. You can create 5 VPCs per region. If you want to increase this limit, you’ve to increase the number of internet gateways by the same number. And, per VPC 200 subnets are allowed. 5 elastic IP addresses are allowed per region. The number of Internet, VPN and NAT gateways per region is also set to 5.
+Anyhow, customer gateways are allowed to 50 per region. One can create 50 VPN connections per region. It is highly recommended to cover questions based on connectivity while going through the top AWS VPC interview questions.
+
+11. Can you illustrate what is CIDR Routing in VPC?
+Answer: The questions based on IP address are the common among frequently-asked AWS VPC interview questions. This CIDR question can be answered in the following manner. Classless inter-domain routing (CIDR) is a set of Internet protocol (IP) standards that are used to allocate IP addresses for networks and individual devices. With CIDR, a single IP address can be used to pick many unique IP addresses.
+
+12. What are Security Groups in VPC?
+Answer: In VPC, a security group’s function is to manage the traffic for the instances. Instances can be single in number or many. Actually, it does act as a virtual firewall that can control inbound and outbound traffic for different EC2 instances. You can manually add rules to each security group to control the traffic within the associated instances.
+
+13. What do you mean by Network ACLs (Access Control List) in VPC?
+Answer: Network ACLs does the similar function of a network security group in VPC; IE controlling inbound and outbound traffic in VPC. The main difference between a network ACL and a security group is that the latter’s role is to act as a firewall for associated EC2 instances whereas an ACL’s role is to serve firewall job for associated subnets. Your VPC generates an ACL automatically by default and it’s modifiable. Unlike a security group, this default network ACL allows all inbound and outbound traffic by default. And it’s possible to associate an ACL with multiple subnets. But at a time, only one subnet can be associated with a network ACL.
+
+14. What is stateful and stateless filtering?
+Answer: A stateful filtering checks the origin of the request and triggers automatic replay to the originating computer. On the other hand, stateless filtering only examines the source and destination IPs ignoring whether it’s a new request or replay to a request.
+In VPC, security groups carry out stateful filtering whereas network ACLs perform stateless filtering. Filtering based questions are generally asked in the interview among other popular AWS VPC interview questions so you need to prepare yourself with the answer.
+
+15. What are the functions of an Amazon VPC router?
+Answer: VPC router allows Amazon EC2 instances within subnets to interact with Amazon EC2 instances in other subnets within the same VPC. Virtual private gateways, subnets and Internet gateways, etc. can also communicate with each other by means of a VPC router.
+
+16. How much Amazon charge you for sharing their cloud space with you?
+Answer: Basically for a VPN connection to your VPC, Amazon charges nearly $0.5 for an hour. There is an option to terminate your VPN connection through AWS consoled if you don’t want to charge for this.
+
+17. What is PrivateLink from AWS?
+Answer: PrivateLink provides utmost availability and scalability for AWS customers to access their services maintaining the traffic within the AWS network. It delivers private connections between VPCs, on-premises applications, etc. securely on Amazon network.
+
+18. What is ClassicLink in VPC?
+Answer: If you want to connect Amazon EC2-classic instances to VPC, you have to use ClassicLink. This work only within the same region and this makes use of private IP addresses. Its working is simple- you just have to enable ClassicLink in your VPC account and associate a security group from VPC to EC2-classic instance.
+This type of questions are the additions AWS VPC interview questions that you shouldn’t miss so prepare yourself with the answer.
+
+19. What is so special about VPC that stands out it from other private clouds?
+Answer: There’s no need for a particular hardware, physical data centers or virtual private networks if you want a private network within the cloud – AWS VPC will provide it. The advanced security features of VPC makes it almost invulnerable to privacy & security threats.
+

@@ -1,0 +1,94 @@
+1. What is AWS Lambda?
+It is an AWS serverless computing service offered by Amazon Web Services that runs the code in response to events and automatically manages the compute resource.
+
+2. What are the languages supported by AWS Lambda?
+The languages supported by AWS Lambda are as follows:
+•	Java
+•	Python
+•	js
+•	C#
+•	Ruby
+•	Go
+•	PowerShell
+
+3. What is automated deployment?
+While automated deployment is similar to programming in other languages, it cuts down a lot of associated challenges. It also cuts down all human interferences; this, in turn, helps organizations ensure quality-based outcomes that are best in every parameter. As one becomes more proficient in it, deployment of the pipeline can easily be created.
+
+4. What is Auto Scaling in Lambda?
+It is one of the features of AWS that helps one to automatically configure and spin novel instances. One of the best things about AWS Auto Scaling is that it does not require any interference at any stage. However, users can monitor everything through metrics and thresholds. To enable this task, one needs to cross a threshold, and without interference, one can see the instances scaled horizontally.
+
+5. What type of storage is provided by Amazon?
+There are different types of storage options provided by Amazon that are effective in terms of durability as well as performance. While the combination of storage access works fine, independent access can also be provided as per the requirements.
+The first storage is EBS, which is actually block-level storage. It has an encryption feature and is a good option to consider when independent storage is required.
+The next storage type is EC2 instance, which is a good fit for permanent storage needs. It is directly connected to the host PC as a storage disk. The data on this storage is valid as long as the instance is valid.
+Another type of Amazon storage is called the Adding storage, which contains all information related to the boot instance. Amazon S3 is another option available for storage that can store large amounts of data and is often known to be an inexpensive storage option.
+
+6. While performing DDOS, what is the limit for execution in Lambda?
+The limit is five minutes while performing DDOS.
+
+7. What do you think makes Lambda a timesaving approach?
+There can be a number of reasons behind this. One of which is that Lambda stores everything in a local server memory.  Another reason can be that data is stored directly in the database without it affecting the performance. In addition to these features, Lambda also has simple testing techniques; for example, integration testing can be made powerful through multiple vendors.
+Before moving ahead, you can check out this AWS Lambda YouTube tutorial to gain a better understanding of the topic.
+
+8. What is your understanding of AMI?
+AMI is Amazon Machine Image; it provides the information required to launch an instance. One can also launch multiple instances using AMI when there are multiple vendors.
+
+9. Do you think there is a relation between Instance and AMI?
+Yes, they are related to each other. An instance is a virtual machine with particular specifications and OS that one can choose while creating them. While AMI or Amazon Machine Image is the complete backup of an instance.
+
+10. What are the best practices for security in Lambda?
+Using AWS IAM (Identity Access and Management) is one of the widely used security practices in Lambda. Granting specific user access to particular roles is another effective option to enhance security. In this security practice, access can be restricted to hosts that are not trusted or authorized. In addition to this, no matter how effective and stringent the security protocols are, they should always be updated timely.
+
+11. What is elastic blockage storage in Lambda?
+Amazon’s elastic block storage (EBS) can be defined as a virtual storage area network where tasks can be started. It can tolerate faults easily, and users need not worry about loss of data even if the disk is damaged in the RAID. Provisioning and allocating the storage can also be done in EBS. If required, it can also be connected to an API.
+
+12. How does Lambda handle failure during event processing?
+In Lambda, a function is run in either synchronous or asynchronous mode. If a function fails in synchronous mode, then it just gives an exception to the calling application. If a function fails in asynchronous mode, then it is retried at least three times.
+•	
+•	
+•	
+
+13. Is vertical scaling possible in Lambda?
+Yes, vertical scaling is possible in Lambda. Vertical scaling is one of the  most in-demand features of AWS Lambda. This feature is generally used when a user needs to spin a larger instance. If, in case, they are already using an instance, it can be paused and detached from the server. In this process, it is important to note the ID of the new device post that can continue the process.
+
+14. What are the limitations of AWS Lambda?
+ Some of the limitations of AWS Lambda are as follows:
+•	The default deployment package size is 50 MB.
+•	The ephemeral disk space is limited to 512 MB as the Lambda function will take longer time to execute with a larger package size.
+•	The execution time is more when the memory allocation is less.
+•	The memory range is from 128 MB to 10,240 MB.
+•	The maximum execution timeout for a function is 15 minutes.
+
+15. How is a Lambda function executed?
+A Lambda function can be directly invoked by the Lambda console, Lambda API, AWS SDK, AWS CLI, and AWS toolkits.
+
+16. Name a simple method to improve performance in AWS Lambda.
+Performance in AWS Lambda can be simply improved by using RAID, the Linux software. It also helps in increasing security.
+
+17. In how many ways can AWS Lambda be used?
+One can use Lambda in the following ways:
+•	As an event-driven compute service, AWS Lambda runs code in response to events.
+•	These events can be the changes to data in an Amazon S3 bucket or AWS DynamoDB
+•	Lambda can run code in response to HTTP requests using Amazon API Gateway or API calls made using AWS SDKs.
+
+18. How does AWS Lambda secure my code?
+Lambda secures the code by encrypting it. Lambda stores the code in Amazon S3 buckets and encrypts it when it is resting. Further, AWS Lambda performs an additional integrity check on the code while it is running.
+
+19. What is serverless computing?
+Serverless computing is a cutting-edge computing execution model wherein a cloud provider runs the virtual server and dynamically manages the allocation of machine resources. Serverless computing helps build and run applications and services without being concerned about servers. With the prowess of serverless computing, applications run on servers, but the servers are managed by AWS. This gives developers a lot of flexibility and freedom to focus on app development. AWS Lambda is at the core of serverless computing as it helps to run code without servers.
+
+20. What is the procedure to build an AMI ?
+To build an AMI, first you need to get an instance from another trusted AMI. After this, you need  to add components, as well as packages. You can avoid adding data if it is sensitive due to security reasons. As the next step, add the access credentials post which you can sign up with a database. The total amount of data that you need and stored already can be enhanced up to any level depending on the exact requirements.
+
+21. Do Lambda-based functions stay available after the code or configuration is changed?
+Yes, Lambda-based functions remain available after the code or configuration is changed. When a Lambda function is updated, there is a brief period, less than a minute, when requests can be served by either the old or new version of the function.
+
+22. What are the restrictions applied to the AWS Lambda function code?
+Although AWS Lambda has very few restrictions on various kinds of operating systems activities and standard programming languages, there are a few restrictions on activities that disable instances and trace calls and inbound network connections. In addition to this, AWS Lambda also disables activities such as debugging systems and TCP ports. For outbound data connection, TCP or IP sockets are very supportive.
+
+23. How to get started with a serverless application?
+In order to get started with a serverless application, a user needs to console AWS Lambda and download the blueprint. The original file that will be downloaded should have an AWS Sam file, also known as AWS resource in the application, and a ZIP file. AWS Cloud formation commands can be used for packaging and deploying serverless application codes and documentation can also be performed.
+
+24. What are the disadvantages of using the serverless approach?
+Everything in AWS Lambda comes with its own merits and demerits depending on the task performed. The upper limit is strictly on the vendor control in the serverless approach and offers more downtime. Sometimes there is a loss of system functionality and the system’s limits are other issues; no dedicated hardware is available for AWS serverless approach. In most cases, customer errors can also give rise to problems.
+
