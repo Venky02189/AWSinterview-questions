@@ -1,0 +1,11 @@
+Q1. What is Jenkins?
+Q2. What is Jenkins used for?
+Q3. Which architecture is recommended for a scalable Jenkins environment?
+Q4. How to add a user in Jenkins?
+Q5. What is Jenkins Pipeline?
+Q6. What is Jenkinsfile?
+Q7. What is continuous integration in Jenkins?
+Q8. How to change port for Jenkins?
+Q9. What are the software prerequisites that must be met before Jenkins is installed?
+Q10. How to configure and use third-party tools in Jenkins?
+yet to add
