@@ -92,4 +92,5 @@ You can store an unlimited volume of data and objects in Amazon S3. Individually
 
 9. Does Amazon save its very own data in Amazon S3?
 Yes. Developers inside Amazon use Amazon S3 for an extensive form of initiatives. Many of those initiatives use Amazon S3 as their authoritative data save and depend upon it for business-vital operations.
-yet to add
+
+yet to add few more
