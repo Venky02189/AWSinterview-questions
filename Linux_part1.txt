@@ -1,0 +1,143 @@
+1.	How do you list files in a directory using the Linux command line? with syntax
+        ls 
+2.	How to list hidden file?
+	ls -a 
+3.	What's the command to create a new directory in Linux?
+	mkdir directory_name 
+4.	How do you change the permissions of a file in Linux? with explanation what is xrwxrx diff way of giving permissions?
+	using chmod 
+	RWX                  RWX 			WRX
+	OWNER PERMISSION     GROUP PERMISSION		PERMISSIONS FOR OTHER/INDUVIDUALS
+	
+	NUMERICAL rwx
+
+
+5.	How could you search for a specific string within a file using the Linux command line?
+	grep "search_string" filename
+
+	grep -i "hello" file.txt
+	grep -w "hello" file.txt  excat match
+
+6.	What command could you use to display the contents of a text file in the Linux terminal? 
+	cat command
+
+7.	differnce between cat and vi?
+
+	CAT to display content of file, Vi is used to write/edit the content in file
+
+8.	diff between cat and tac?
+	CAT - display files in same order
+	TAC- in reverse
+
+	
+9.	how to redirect a out of a command to file instead of console?
+	command >> filename
+	echo "New entry" >> log.txt
+
+10.	file redirect and append symbols?
+	overwriting the file if it already exists.
+	Redirect - command >> filename 	example - ls > directory_list.txt
+
+	adding the output to the file if it already exists.,
+	Append - command >> filename
+
+11.	What's the difference between the grep and awk commands?
+	Gerp - search the word through the files
+	-i: Case-insensitive search.
+	-v: Invert match (show lines that do not match).
+	-n: Show line numbers of matches.
+	-r: Recursively search in directories.
+
+	AWK: Search a word in a file by filtering the column or rows
+	awk '{ print $3 }' data.txt which print third column in a file
+	NF and NR for last column and last row
+
+
+12.	diff awk and cut?
+
+	CUT can support specified delimiters but not for complex data
+	AWK uncoditially based on tasks	
+	
+13.	How do you kill a running process in Linux?
+	First we need to find the PID 
+	 steps :
+		using pgrep/top
+		then using Kill command
+		kill PID
+		force kill - kill -9 
+
+			Find the PID using ps, top, or pgrep.
+			Use kill PID to terminate the process.
+			Use kill -9 PID to forcefully kill it if necessary.
+			Use pkill or killall for killing by name
+			
+
+14.	howto check running processes?
+
+			ps aux: Detailed process list.
+			top: Real-time process monitoring.
+			htop: Interactive process viewer (if installed).
+			pgrep: Find process IDs by name.
+			pstree: Display processes in a tree format.
+			systemctl: Manage and check system services
+
+15.	how to get PID of a process?
+	using ps, top, or pgrep
+
+16.	What's the command to check the disk space usage on a Linux system?
+	df - diskfree
+
+17.	diff bw df -h and du -h? what is -h?
+	Use df -h to check overall filesystem usage.
+	Use du -h /path/to/directory to check how much space a specific directory and its contents are using.
+	The -h option in both commands makes the output easier to read by converting sizes into human-friendly units.
+
+
+18.	what is port used for ssh?
+	port 22
+
+19.	diff bw cp and scp? how scp works? syntax?
+	cp - copy command - used to copy a file and one dir to another dir
+	Purpose: Used to copy files and directories within the local filesystem.
+	Usage: Does not support copying files over a network.
+	syntax: cp source.txt destination.txt
+
+	SCP ( Secured Copy Protocal):
+	Purpose: Used to securely copy files between hosts on a network over SSH.
+	Usage: Supports copying files between local and remote systems.
+	Syntax : scp localfile.txt user@remotehost:/path/to/destination/
+	
+	
+
+20.	What's the Linux terminal command to find out your current working directory?
+
+	PWD
+
+
+21.	How do you move a file from one directory to another using Linux commands?
+	Move Command ( mv)
+	mv /path/to/source/file.txt /path/to/destination/
+	mv -i (confirms before overwriting)
+
+
+22.	how to rename a file?
+	mv [old_filename] [new_filename]
+	mv /path/to/oldname.txt /path/to/newname.txt
+
+
+23.	diff bw mv and cp?
+	mv - move files or dir from source to dest without 
+	cp copy files or dir leaving the original file unchanged.
+	
+
+24.	How would you check the network connectivity between your machine and a remote server using the Linux terminal?
+	Use "ping" for basic connectivity testing.
+	Use "traceroute" to see the path to the server.
+	Use "telnet" or "nc" to check connectivity to specific ports.
+
+25.	What Linux command could you use to display the list of users currently logged into the system?
+
+	who - command
+	Use who to see a list of logged-in users.
+	Use w for more detailed information.
+	Use users for a simple list of usernames.
