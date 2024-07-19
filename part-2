@@ -1,0 +1,54 @@
+1.	1.In Linux, what command would you use to monitor real-time changes in a log file?
+tail -f /path/to/logfile
+2.	how can I extract first 5 lines and last 5 lines of file? 
+head -n 5 /path/to/file
+tail -n 5 /path/to/file
+3.	How can you create a symbolic link to a file or directory in the Linux terminal?
+ln -s /path/to/target /path/to/symlink
+4.	what is link? diff bw soft and hard link and syntax? 
+Hard Link: Points directly to the inode of a file. It's essentially an additional name for an existing file.
+ln /path/to/file /path/to/hardlink
+Soft Link (Symbolic Link): Points to the path of the file. It can link to directories and across filesystems.
+ln -s /path/to/file_or_dir /path/to/symlink
+
+5.	What's the command to restart the Linux system? 
+Sudo reboot
+6.	What command would you use to compress and decompress files using the gzip tool? 
+gzip filename – compress
+gungip - decompress
+7.	How do you add a new user to the system using the command line? 
+sudo adduser newusername
+8.	How do you chain several commands together in Linux? 
+command1 && command2 || command3
+9.	what is pipeline (|)?
+A pipeline passes the output of one command as input to another command.
+10.	How do you make a command run in the background in Linux? 
+command &
+11.	how find files in any filesystem? find files older than 30 days ? files › 1GB? 
+find / -name "filename"
+find /path/to/search -type f -mtime +30 – older than 30days
+find /path/to/search -type f -size +1G - <1gb or >
+
+12.	how generate ssh key? how to make password less connection? 
+ssh-keygen -t rsa -b 2048
+ssh-copy-id username@remote_host – password less connection
+13.	how to system resources usage like memory, cpu and disk? 
+top
+free -h
+df -h
+14.	what is sed command? what actions can be done using sed? 
+Sed – Stream editor can perform text transformations on an input stream (file or input from a pipeline).
+sed 's/old_text/new_text/' file  //find and replace
+sed '7d' file  # Delete 7th line
+sed -n '1,5p' file  # Print 1st to 5th lines
+15.	delete 7th line from a file? 
+Sed -I ‘7d’ file name
+16.	print 1 to 5 th lines from a file? 
+Sed -p ‘1,5p’ filename	
+17.	find and replace word in a file. 
+sed -i 's/old_word/new_word/g' file
+18.	what is -i option in sed. 
+-i stands for "in-place" and allows you to edit files directly.
+19.	How to exclude a word in a file using grep? example I want to print lines which is not having word "today"?
+grep -v "today" file
+-v indicates inverts the match to exclude lines containing "today".
